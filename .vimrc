@@ -26,7 +26,9 @@ filetype plugin on
 nnoremap <silent> <C-h> gT
 nnoremap <silent> <C-l> gt
 
-" microsoft copy
+" Linux and Mac OS copy to clipboard
+set clipboard=unnamed
+" Microsoft copy to clipboard
 if system('uname -r') =~ "microsoft"
         augroup Yank
         autocmd!
