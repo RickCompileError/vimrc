@@ -1,20 +1,28 @@
-" number
 set number relativenumber
+set noswapfile
+" set cursorline
 
 " tab & space
 set tabstop=4
 set shiftwidth=4
-
-" set expandtab
 set autoindent
+" set expandtab
 
-" highlight search result
+" window & tab
+set showtabline=2
+set splitbelow
+set splitright
+
+" search
 set hlsearch
+set incsearch
+" set ignorecase
 
 " mouse
 set mouse=a
 
-" background
+" color 
+syntax on
 colorscheme elflord
 
 " filetype

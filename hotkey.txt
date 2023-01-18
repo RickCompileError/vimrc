@@ -1,8 +1,11 @@
-swap between terminal and vim
+Command
 	<ctrl> + z => swap to terminal
 	fg => swap to vim
+	:! <command> => run the command
+	:r !<command> => paste the command result
+	:source <file> => read .vimrc file setting
 
-Search and Replace and Substitute
+Search, Replace, Substitute
     [/|?]pattern => search for [forward | backward] pattern
     [n|N] => repeat search in [same | opposite] direction
 	[*|#] => goto the [next | previous] occurence of the current word
@@ -11,11 +14,6 @@ Search and Replace and Substitute
     :%s/\<old\>/new/g => replace all word exactly matching
     :'<,'>s/old/new/g => replace all in visual mode
     :'a,'bs/old/new/g => replace from mark a to mark b inclusive
-
-Marks
-    :marks => list all marks
-    m[a|b|...] => mark current line for mark [a|b|...] [note: case sensitive]
-    '[a|b|...] => jump to mark [a|b|...]
 
 Registers
     "xp => paste contents of register x (a register for vim)
@@ -41,6 +39,7 @@ Cursor Movement
     H => move to top of screen
     M => move to middle of screen
     L => move to bottom of screen
+	^ => move to the first appear character in the line
 
 Editing
 	<enter> | <ctrl> + [ => exist insert mode
@@ -57,6 +56,8 @@ Editing
     ciw => substitute whole word under the cursor
 	r => replace single character
 	R => replace more than one characters until <ESC> is pressed
+	[A] + [a|x] => [in|de]crease a number
+	~ => switch case
     . => repeat last edit command
 
 Cut and Paste
@@ -73,8 +74,10 @@ Marking text (Visual mode)
 	v[i|a][w|s|p|<punc>|t] => mark [inner | around ] [word | sentence | paragraph | punctuation | tags]
     i[b|B] => inner block with [()|{}]
 
-Number
-	[A] + [a|x] => [in|de]crease a number
+Marks
+    :marks => list all marks
+    m[a|b|...] => mark current line for mark [a|b|...] [note: case sensitive]
+    '[a|b|...] => jump to mark [a|b|...]
 
 Multiple Files
 	:tabe => open a vim tab
@@ -89,6 +92,11 @@ Multiple Files
 	:b[<number>|<filename>] => goto the [number | file] located buffer
 	:tab ba => expand all in buffer tabs
 	[ctrl] + ^ => exchange between two buffers
+
+Fold Lines
+	zf => fold lines
+	zd => unfold lines
+	zfip => fold inline paragraph
 
 Future functions
 	adjust cursor move speed
