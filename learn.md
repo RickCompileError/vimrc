@@ -2,15 +2,15 @@
 ## Command
 - \<Ctrl> + z => swap to terminal
 - fg => swap to vim
-- :! <command> => run the command
-- :r !<command> => paste the command result
-- :source <file> => read .vimrc file setting
+- :! \<command> => run the command
+- :r !\<command> => paste the command result
+- :source \<file> => read .vimrc file setting
 
 ## Search, Replace, Substitute
 - [/|?]pattern => search for [forward | backward] pattern
 - [n|N] => repeat search in [same | opposite] direction
 - [*|#] => goto the [next | previous] occurence of the current word
-- :e <file> => open file
+- :e \<file> => open file
 - :%s/old/new/g => replace all
 - :%s/\<old\>/new/g => replace all word exactly matching
 - :'<,'>s/old/new/g => replace all in visual mode
@@ -43,7 +43,7 @@
 - ^ => move to the first appear character in the line
 
 ## Editing
-- <enter> | \<Ctrl> + [ => exist insert mode
+- \<Enter> | \<Ctrl> + [ => exist insert mode
 - u => undo
 - \<Ctrl> + r => redo
 - i => insert before cursor
@@ -56,24 +56,26 @@
 - cw => substitute to the end of the word
 - ciw => substitute whole word under the cursor
 - r => replace single character
-- R => replace more than one characters until <ESC> is pressed
+- R => replace more than one characters until \<ESC> is pressed
 - [A] + [a|x] => [in|de]crease a number
 - ~ => switch case
 - . => repeat last edit command
 - \<Ctrl> + [p|n] => autocomplete matching word in [back|for]ward direction
+- \<Ctrl> + e => cancel autocomplete
+- \<Ctrl> + e or \<Enter> => select autocomplete
 
 ## Cut and Paste
 - dd => delete
 - diw => delete word under the cursor
 - [x|X] => delete character [under | before] the cursor
-- bcw[]<ESC>P => cut down one word (b to start of the word, cw replace to the end of the word), type [], <ESC> and paste word just cut
+- bcw[]\<ESC>P => cut down one word (b to start of the word, cw replace to the end of the word), type [], \<ESC> and paste word just cut
 
 ## Marking text (Visual mode)
 - v => visual mode
 - V => line visual mode
 - \<Ctrl> + v => visual block
 - v[i|a]w => mark a [word | word include around space]
-- v[i|a][w|s|p|<punc>|t] => mark [inner | around ] [word | sentence | paragraph | punctuation | tags]
+- v[i|a][w|s|p|\<punc>|t] => mark [inner | around ] [word | sentence | paragraph | punctuation | tags]
 - i[b|B] => inner block with [()|{}]
 
 ## Marks
@@ -91,7 +93,7 @@
 - vim -p file => In terminal, open N tab pages
 - :ls => view all in vim buffer files
 - :b[n|p|f|l|d] => goto [next | previous | first | last | delete] buffer
-- :b[<number>|<filename>] => goto the [number | file] located buffer
+- :b[\<number>|\<filename>] => goto the [number | file] located buffer
 - :tab ba => expand all in buffer tabs
 - \<Ctrl> + ^ => exchange between two buffers
 
