@@ -60,6 +60,7 @@
 - [A] + [a|x] => [in|de]crease a number
 - ~ => switch case
 - . => repeat last edit command
+- <Ctrl> + [p|n] => autocomplete matching word in [back|for]ward direction
 
 ## Cut and Paste
 - dd => delete
