@@ -1,6 +1,6 @@
 # Vim Learning
 ## Command
-- <ctrl> + z => swap to terminal
+- \<Ctrl> + z => swap to terminal
 - fg => swap to vim
 - :! <command> => run the command
 - :r !<command> => paste the command result
@@ -35,17 +35,17 @@
 - [t|T]x => jump to before [next | previous]  occurrence of char x
 - ; => repeat previous [f|t|F|T] movement
 - , => repeat previous [f|t|F|T] movement backward
-- <ctrl> + [f|b] => move [forward | back] one full screen
-- <ctrl> + [d|u] => move [forward | back] 1/2 a screen
+- \<Ctrl> + [f|b] => move [forward | back] one full screen
+- \<Ctrl> + [d|u] => move [forward | back] 1/2 a screen
 - H => move to top of screen
 - M => move to middle of screen
 - L => move to bottom of screen
 - ^ => move to the first appear character in the line
 
 ## Editing
-- <enter> | <ctrl> + [ => exist insert mode
+- <enter> | \<Ctrl> + [ => exist insert mode
 - u => undo
-- <ctrl> + r => redo
+- \<Ctrl> + r => redo
 - i => insert before cursor
 - I => insert at the beginning of the line
 - a => append after cursor
@@ -60,7 +60,7 @@
 - [A] + [a|x] => [in|de]crease a number
 - ~ => switch case
 - . => repeat last edit command
-- <Ctrl> + [p|n] => autocomplete matching word in [back|for]ward direction
+- \<Ctrl> + [p|n] => autocomplete matching word in [back|for]ward direction
 
 ## Cut and Paste
 - dd => delete
@@ -71,7 +71,7 @@
 ## Marking text (Visual mode)
 - v => visual mode
 - V => line visual mode
-- <ctrl> + v => visual block
+- \<Ctrl> + v => visual block
 - v[i|a]w => mark a [word | word include around space]
 - v[i|a][w|s|p|<punc>|t] => mark [inner | around ] [word | sentence | paragraph | punctuation | tags]
 - i[b|B] => inner block with [()|{}]
@@ -83,9 +83,9 @@
 
 ## Multiple Files
 - :tabe => open a vim tab
-- <ctrl> + hl => change between tabs
+- \<Ctrl> + hl => change between tabs
 - :[v]new => open a [vertical | horizontal] window
-- <ctrl> + w + [hjkl] => move between vim windows
+- \<Ctrl> + w + [hjkl] => move between vim windows
 - :[sp|vs] file => open a file in a [horizontally | vertically] split window
 - vim -[o|O] file => In terminal, open all files in a [horizontally | vertically] split windows
 - vim -p file => In terminal, open N tab pages
@@ -93,7 +93,7 @@
 - :b[n|p|f|l|d] => goto [next | previous | first | last | delete] buffer
 - :b[<number>|<filename>] => goto the [number | file] located buffer
 - :tab ba => expand all in buffer tabs
-- [ctrl] + ^ => exchange between two buffers
+- \<Ctrl> + ^ => exchange between two buffers
 
 ## Fold Lines
 - zf => fold lines
