@@ -26,12 +26,11 @@
 - :%y => yank all lines to vim
 - :%+y => yank all lines to clipboard
 - :%\*y => yank all lines to clipboard
-:::info
-> There are two clipboards in UNIX-like system
-> '\*' means **PRIMARY**, for copy-on-select (Pasted with middle mouse button)
-> '+' means **CLIPBOARD**, for common keybind (^C + ^V)
-> (OS X and Windows systems only have one clipboard)
-:::
+
+> There are two clipboards in UNIX-like system<br>
+> '\*' means **PRIMARY**, for copy-on-select (Pasted with middle mouse button)<br>
+> '+' means **CLIPBOARD**, for common keybind (^C + ^V)<br>
+> OS X and Windows systems only have one clipboard<br>
 
 ## Cursor Movement
 - [gg|G] => go to [first | last] line
