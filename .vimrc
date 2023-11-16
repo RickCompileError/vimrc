@@ -35,6 +35,9 @@ filetype on
 filetype indent on
 filetype plugin on
 
+" encoding
+set encoding=UTF-8
+
 " remap the key to switch between the vim tabs
 nnoremap <silent> <C-h> gT
 nnoremap <silent> <C-l> gt
@@ -66,8 +69,15 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'ryanoasis/vim-devicons'
+Plug 'scrooloose/nerdtree'
 call plug#end()
 
 " vim-airline-themes setting
 let g:airline_theme='wombat'
-" let g:airline_powerline_fonts = 1 " only can run on Unix-like environment
+let g:airline_powerline_fonts = 1 " only can run on Unix-like environment
+let g:airline#extensions#tabline#enabled = 1
+
+" nerdtree setting
+nnoremap <silent> <F2> :NERDTreeToggle<Enter>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
