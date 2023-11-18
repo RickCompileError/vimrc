@@ -28,7 +28,9 @@ set mouse=a
 
 " color
 syntax on
-colorscheme elflord
+" Loading solarized8 color scheme
+set background=dark
+autocmd vimenter * ++nested colorscheme solarized8
 
 " filetype
 filetype on
@@ -43,13 +45,7 @@ nnoremap <silent> <C-h> gT
 nnoremap <silent> <C-l> gt
 
 " remap the key to autocomplete bracket
-" inoremap ( ()<Esc>i
-" inoremap { {}<Esc>i
 inoremap {<CR> {<CR>}<Esc>O
-" inoremap " ""<Esc>i
-" inoremap ' ''<Esc>i
-" inoremap < <><Esc>i
-" inoremap [ []<Esc>i
 
 " autocmd setting
 autocmd BufWritePre * :%s/\s\+$//e
@@ -68,15 +64,18 @@ endif
 " Plugins
 " To install without leaving vim, you can type ':source %\n :PlugInstall'
 call plug#begin('~/.vim/plugged')
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-" Plug 'ryanoasis/vim-devicons'
-Plug 'scrooloose/nerdtree'
-Plug 'ctrlpvim/ctrlp.vim'
-" Plug 'mattn/emmet-vim' 				(For HTML develop, ex. ul>li*3)
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat' 				" Enable repeating vim-surround operation
-Plug 'tomtom/tcomment_vim'
+	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
+	" Plug 'ryanoasis/vim-devicons'
+	Plug 'scrooloose/nerdtree'
+	Plug 'ctrlpvim/ctrlp.vim'
+	" Plug 'mattn/emmet-vim' 				" For HTML develop, ex. ul>li*3
+	Plug 'tpope/vim-surround'
+	Plug 'tpope/vim-repeat' 				" Enable repeating vim-surround operation
+	Plug 'tomtom/tcomment_vim'				" <Ctrl> + //
+	" Plug 'majutsushi/tagbar'				" Need download dependency, so not use
+	Plug 'mileszs/ack.vim'
+	Plug 'lifepillar/vim-solarized8'
 call plug#end()
 
 " vim-airline-themes setting
