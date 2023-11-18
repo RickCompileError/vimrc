@@ -48,7 +48,7 @@ nnoremap <silent> <C-l> gt
 inoremap {<CR> {<CR>}<Esc>O
 
 " autocmd setting
-autocmd BufWritePre * :%s/\s\+$//e
+autocmd BufWritePre * :%s/\s\+$//e " remove trivial white space
 
 " Linux and Mac OS copy to clipboard
 set clipboard=unnamed
@@ -64,18 +64,41 @@ endif
 " Plugins
 " To install without leaving vim, you can type ':source %\n :PlugInstall'
 call plug#begin('~/.vim/plugged')
+	" status/tabline for vim
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
-	" Plug 'ryanoasis/vim-devicons'
+
+	" <F2>, open file tree
 	Plug 'scrooloose/nerdtree'
+
+	" <Ctrl> + p, file finder (search file name)
 	Plug 'ctrlpvim/ctrlp.vim'
-	" Plug 'mattn/emmet-vim' 				" For HTML develop, ex. ul>li*3
+
+	" Keyword finder (search word in file)
+	" Plug 'mileszs/ack.vim'
+
+	" fast surround plugin (S+<symbol> or cs<osym><nsym>)
 	Plug 'tpope/vim-surround'
-	Plug 'tpope/vim-repeat' 				" Enable repeating vim-surround operation
-	Plug 'tomtom/tcomment_vim'				" <Ctrl> + //
-	" Plug 'majutsushi/tagbar'				" Need download dependency, so not use
-	Plug 'mileszs/ack.vim'
+
+	" Enable repeating vim-surround operation
+	Plug 'tpope/vim-repeat'
+
+	" <Ctrl> + //
+	Plug 'tomtom/tcomment_vim'
+
+	" My colorscheme
 	Plug 'lifepillar/vim-solarized8'
+
+	" Git use in vim
+	Plug 'tpope/vim-fugitive'
+
+	" Quick see file overview, Need download dependency, so not use
+	" Plug 'majutsushi/tagbar'
+
+	" For HTML develop, ex. ul>li*3
+	" Plug 'mattn/emmet-vim'
+
+	" Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 " vim-airline-themes setting
