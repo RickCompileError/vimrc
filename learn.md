@@ -15,6 +15,7 @@
 - :%s/\<old\>/new/g => replace all word exactly matching
 - :'<,'>s/old/new/g => replace all in visual mode
 - :'a,'bs/old/new/g => replace from mark a to mark b inclusive
+- :%s/\(old\)/\1 => reuse matching expression
 
 ## Registers
 - "xp => paste contents of register x (a register for vim)
