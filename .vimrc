@@ -50,6 +50,14 @@ inoremap {<CR> {<CR>}<Esc>O
 " autocmd setting
 autocmd BufWritePre * :%s/\s\+$//e " remove trivial white space
 
+" fix chinese english spacing
+function! FixChineseEnglishSpacing()
+	" match Common CJK and Extended CJK
+	%s/\(\w\)\([一-龥]\)\|\([一-龥]\)\(\w\)/\1\3 \2\4/g
+endfunction
+
+nnoremap <F5> :call FixChineseEnglishSpacing()<CR>
+
 " Linux and Mac OS copy to clipboard
 set clipboard=unnamed
 " Microsoft copy to clipboard
